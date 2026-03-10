@@ -113,7 +113,7 @@ class AgoraProvider extends GetxService {
   /// Full URL to token endpoint. Example: http://10.0.2.2:4000/rtc-token
   String get tokenServerUrl => _resolveRtcTokenUri().toString();
 
-  /// Base URL of token server. Example: http://10.0.2.2:4000
+  // / Base URL of token server. Example: http://10.0.2.2:4000
   String get tokenServerBaseUrl => _resolveTokenServerBaseUri().toString();
 
   Future<String?> _resolveToken(String channelName, int uid) async {
@@ -194,12 +194,13 @@ class AgoraProvider extends GetxService {
 
       Get.log(
         'Invalid ${AppConstants.agoraTokenServerUrlEnv}="$configured". '
-        'Falling back to default local host mapping.',
+        'Falling back to production backend.',
       );
     }
 
+    // Production backend URL
     _cachedTokenServerBaseUri = Uri.parse(
-      'http://${_defaultTokenServerHost()}:4000',
+      'https://call-chat-hub.vercel.app',
     );
     return _cachedTokenServerBaseUri!;
   }
@@ -220,11 +221,6 @@ class AgoraProvider extends GetxService {
       fragment: null,
     );
     return _cachedRtcTokenUri!;
-  }
-
-  String _defaultTokenServerHost() {
-    if (Platform.isAndroid) return '10.0.2.2';
-    return '127.0.0.1';
   }
 
   void _logTokenServerConfigIfNeeded() {
