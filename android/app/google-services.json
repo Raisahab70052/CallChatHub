@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "373324545697",
+    "project_id": "voice-call-138a1",
+    "storage_bucket": "voice-call-138a1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373324545697:android:a9bef4de015eff6247bae0",
+        "android_client_info": {
+          "package_name": "com.callchathub.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWb9ecWXJD3JpMNEkRy02wqKPk0rFp7EU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373324545697:android:207ac054e7fe905547bae0",
+        "android_client_info": {
+          "package_name": "com.example.callchathub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWb9ecWXJD3JpMNEkRy02wqKPk0rFp7EU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
