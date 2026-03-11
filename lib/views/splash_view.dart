@@ -28,12 +28,14 @@ class _SplashViewState extends State<SplashView>
       vsync: this,
       duration: const Duration(milliseconds: 900),
     )..repeat(reverse: true);
-    _scale = Tween<double>(begin: 0.95, end: 1.03).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
-    );
-    _fade = Tween<double>(begin: 0.65, end: 1).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
-    );
+    _scale = Tween<double>(
+      begin: 0.95,
+      end: 1.03,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
+    _fade = Tween<double>(
+      begin: 0.65,
+      end: 1,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
 
     Future<void>.delayed(
       const Duration(milliseconds: AppConstants.splashDurationMs),
@@ -82,7 +84,8 @@ class _SplashViewState extends State<SplashView>
                         ).createShader(bounds),
                         child: Text(
                           'CallChatHub',
-                          style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                          style: Theme.of(context).textTheme.headlineLarge
+                              ?.copyWith(
                                 fontWeight: FontWeight.w800,
                                 color: Colors.white,
                               ),
@@ -103,7 +106,9 @@ class _SplashViewState extends State<SplashView>
                 height: 38,
                 child: CircularProgressIndicator(
                   strokeWidth: 3,
-                  color: dark ? const Color(0xFF5F7CFF) : const Color(0xFF2B4FE0),
+                  color: dark
+                      ? const Color(0xFF5F7CFF)
+                      : const Color(0xFF2B4FE0),
                 ),
               ),
             ],

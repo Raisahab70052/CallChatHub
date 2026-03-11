@@ -36,7 +36,7 @@ class AppTheme {
         secondary: const Color(0xFF8A70F0),
         surface: const Color(0xD91A1C28),
       ),
-      textTheme: GoogleFonts.interTextTheme(base.textTheme).copyWith(
+      textTheme: GoogleFonts.plusJakartaSansTextTheme(base.textTheme).copyWith(
         headlineLarge: _heading(32, FontWeight.w800, Colors.white),
         headlineMedium: _heading(28, FontWeight.w700, Colors.white),
         titleLarge: _heading(24, FontWeight.w700, Colors.white),
@@ -60,7 +60,7 @@ class AppTheme {
         secondary: const Color(0xFF6A4FE0),
         surface: const Color(0xE6FFFFFF),
       ),
-      textTheme: GoogleFonts.interTextTheme(base.textTheme).copyWith(
+      textTheme: GoogleFonts.plusJakartaSansTextTheme(base.textTheme).copyWith(
         headlineLarge: _heading(32, FontWeight.w800, const Color(0xFF10162C)),
         headlineMedium: _heading(28, FontWeight.w700, const Color(0xFF10162C)),
         titleLarge: _heading(24, FontWeight.w700, const Color(0xFF10162C)),
@@ -76,11 +76,11 @@ class AppTheme {
   }
 
   static TextStyle _heading(double size, FontWeight weight, Color color) {
-    return GoogleFonts.inter(fontSize: size, fontWeight: weight, color: color);
+    return GoogleFonts.plusJakartaSans(fontSize: size, fontWeight: weight, color: color);
   }
 
   static TextStyle _body(double size, FontWeight weight, Color color) {
-    return GoogleFonts.inter(fontSize: size, fontWeight: weight, color: color);
+    return GoogleFonts.plusJakartaSans(fontSize: size, fontWeight: weight, color: color);
   }
 
   static InputDecorationTheme _inputDecoration(Color fill, Color borderColor) {
