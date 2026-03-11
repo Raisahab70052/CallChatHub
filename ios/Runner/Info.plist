@@ -66,5 +66,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Microphone access is required for audio calls.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera access is required for video calls.</string>
 </dict>
 </plist>

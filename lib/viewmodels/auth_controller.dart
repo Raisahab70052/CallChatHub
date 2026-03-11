@@ -1,9 +1,7 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
-
 import '../core/constants/app_constants.dart';
 import '../core/routes/app_routes.dart';
 import '../data/providers/firebase_auth_provider.dart';
@@ -17,12 +15,10 @@ class AuthController extends GetxController {
   final TextEditingController passwordController = TextEditingController();
   final FocusNode emailFocus = FocusNode();
   final FocusNode passwordFocus = FocusNode();
-
   final RxBool obscurePassword = true.obs;
   final RxBool isLoading = false.obs;
   final RxBool isLoggedIn = false.obs;
   final RxBool isSignUpMode = false.obs;
-
   late final LocalStorageProvider _storage;
   late final FirebaseAuthProvider _authProvider;
   late final FirestoreProvider _firestoreProvider;

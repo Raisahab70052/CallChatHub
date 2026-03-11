@@ -16,14 +16,14 @@ class AgoraProvider extends GetxService {
 
   final String _appId = const String.fromEnvironment(
     AppConstants.agoraAppIdEnv,
-    defaultValue: '7c66cc0c37c94d21bab5ff32e42600f1',
+    defaultValue: AppConstants.defaultAgoraAppId,
   );
   final String _token = const String.fromEnvironment(
     AppConstants.agoraTokenEnv,
   );
   final String _tokenServerUrl = const String.fromEnvironment(
     AppConstants.agoraTokenServerUrlEnv,
-    defaultValue: '',
+    defaultValue: AppConstants.defaultTokenServerUrl,
   );
 
   Future<bool> initialize() async {
@@ -179,7 +179,7 @@ class AgoraProvider extends GetxService {
           parsed.host.isNotEmpty;
       if (valid) {
         final List<String> segments = List<String>.from(
-          parsed!.pathSegments.where((String segment) => segment.isNotEmpty),
+          parsed.pathSegments.where((String segment) => segment.isNotEmpty),
         );
         if (segments.isNotEmpty && segments.last == 'rtc-token') {
           segments.removeLast();
@@ -199,9 +199,7 @@ class AgoraProvider extends GetxService {
     }
 
     // Production backend URL
-    _cachedTokenServerBaseUri = Uri.parse(
-      'https://call-chat-hub.vercel.app',
-    );
+    _cachedTokenServerBaseUri = Uri.parse('https://call-chat-hub.vercel.app');
     return _cachedTokenServerBaseUri!;
   }
 
